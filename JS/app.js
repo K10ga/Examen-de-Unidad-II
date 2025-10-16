@@ -39,6 +39,8 @@ function camposLLenos() {
     
    
     if (nombreValor === "") {
+        localStorage.setItem(`nombre`, nombreValor.value );
+         datosOl.innerHTML = `<li>Nombre guardado: ${nombreValor}</li>`;
         respuestaDiv.innerHTML = "Te falta rellenar el campo **Nombre**";
         console.log("Te falta rellenar el campo Nombre");
     } else if (emailValor === "") {
@@ -59,6 +61,7 @@ function camposLLenos() {
             <li>Correo: ${emailValor}</li>
             <li>Edad: ${edadValor}</li>
         `;
+
     }
 }
 
