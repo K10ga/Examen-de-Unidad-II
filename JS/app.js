@@ -28,6 +28,19 @@ datosOl.addEventListener("click", () => {
         respuestaDiv.innerHTML = "El campo Nombre está vacío. No se guardó nada.";
     }
 });
+datosO2.addEventListener("click", () => {
+  
+    const text = emailInput.value.trim(); 
+    if (text !== "") {
+        localStorage.setItem("email", text); 
+        respuestaDiv.innerHTML = "Nombre guardado localmente!";
+    
+        datosO2.innerHTML = `<li>Email guardado: ${text}</li>`;
+    } else {
+        respuestaDiv.innerHTML = "El campo Nombre está vacío. No se guardó nada.";
+    }
+});
+
 
 
 function camposLLenos() {
