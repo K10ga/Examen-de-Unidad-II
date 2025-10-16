@@ -11,6 +11,8 @@ const nombreAlmacenado = localStorage.getItem("nombre");
 if (nombreAlmacenado) {
     
     datosOl.innerHTML = `<li>Nombre almacenado: ${nombreAlmacenado}</li>`;
+     datosO2.innerHTML = `<li>Nombre almacenado: ${nombreAlmacenado}</li>`;
+      datosO3.innerHTML = `<li>Nombre almacenado: ${nombreAlmacenado}</li>`;
 }
 
 
@@ -44,9 +46,13 @@ function camposLLenos() {
         respuestaDiv.innerHTML = "Te falta rellenar el campo **Nombre**";
         console.log("Te falta rellenar el campo Nombre");
     } else if (emailValor === "") {
+        localStorage.setItem(`email`, emailValor.value);
+         datosOl.innerHTML = `<li>Email guardado: ${emailValor}</li>`;
         respuestaDiv.innerHTML = "Te falta rellenar el campo **Correo**";
         console.log("Te falta rellenar el campo Correo");
     } else if (edadValor === "") {
+          localStorage.setItem(`edad`, edadValor.value);
+           datosOl.innerHTML = `<li>Edad guardado: ${edadValor}</li>`;
        
         respuestaDiv.innerHTML = "Te falta rellenar el campo **Edad**";
         console.log("Te falta rellenar el campo Edad");
